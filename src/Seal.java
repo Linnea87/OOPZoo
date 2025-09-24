@@ -25,4 +25,8 @@ public class Seal extends Animal implements Aquatic{
     public void swim() {
         System.out.println(getName() + " swims playfully in the water.");
     }
+    @Override
+    public String getSpecies() {
+        return "Seal";
+    }
 }

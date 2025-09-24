@@ -19,6 +19,7 @@ public class ZooApp {
 
         for (Animal animal : animals) {
             System.out.println("----- " + "This is " + animal.getName() + " -----");
+            System.out.println("Species: " + animal.getSpecies());
             System.out.println(animal.getName() + " is a " + (animal.isBaby() ? "baby" : "adult") + ".");
 
             animal.makeSound();

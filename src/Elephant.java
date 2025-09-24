@@ -25,4 +25,10 @@ public class Elephant extends Animal implements Savanna{
         System.out.println(getName()+ " roams across the savanna.");
     }
 
+    @Override
+    public String getSpecies() {
+        return "Elephant";
+    }
+
+
 }

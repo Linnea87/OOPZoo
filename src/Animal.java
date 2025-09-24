@@ -29,4 +29,6 @@ public abstract class Animal {
     public abstract void makeSound();
     public abstract void eat();
 
+    // Jag tvingar även varje djur att berätta vilken art det är.
+    public abstract String getSpecies ();
 }
