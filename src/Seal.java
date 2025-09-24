@@ -7,13 +7,14 @@ public class Seal extends Animal implements Aquatic{
         super(name, age);
     }
 
-    // Jag bestämmer hur en Seal låter och vad den äter
+    // Jag bestämmer hur en Seal låter.
     @Override
     public void makeSound() {
         System.out.println(getName() + " Says: Arf arf!");
 
     }
 
+    // Jag bestämmer vad en Seal äter.
     @Override
     public void eat() {
         System.out.println(getName() + " eats fish!");

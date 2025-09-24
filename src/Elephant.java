@@ -7,18 +7,19 @@ public class Elephant extends Animal implements Savanna{
         super(name, age);
     }
 
-    // Jag bestämmer hur en Elephant låter och vad den äter.
+    // Jag bestämmer hur en Elephant låter.
     @Override
     public void makeSound() {
         System.out.println(getName() + " trumpets loudly");
     }
 
+    // Jag bestämmer vad en Elefant äter.
     @Override
     public void eat() {
         System.out.println(getName()+ " eats grass and leaves.");
     }
 
-    // Jag definierar elefantens beteende på savannen.
+    // Jag definierar Elefantens beteende på savannen.
     @Override
     public void roamSavanna() {
         System.out.println(getName()+ " roams across the savanna");
