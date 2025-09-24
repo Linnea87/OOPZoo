@@ -12,6 +12,7 @@ public class ZooApp {
     }
     private void initZoo() {
         animals.add(new Elephant("Dumbo", 2));
+        animals.add(new Seal("Sammy", 1));
     }
     private void runZoo() {
         for (Animal animal : animals) {
