@@ -10,7 +10,7 @@ public class Elephant extends Animal implements Savanna{
     // Jag bestämmer hur en Elephant låter.
     @Override
     public void makeSound() {
-        System.out.println(getName() + " trumpets loudly");
+        System.out.println(getName() + " trumpets loudly!");
     }
 
     // Jag bestämmer vad en Elefant äter.
@@ -22,7 +22,7 @@ public class Elephant extends Animal implements Savanna{
     // Jag definierar Elefantens beteende på savannen.
     @Override
     public void roamSavanna() {
-        System.out.println(getName()+ " roams across the savanna");
+        System.out.println(getName()+ " roams across the savanna.");
     }
 
 }

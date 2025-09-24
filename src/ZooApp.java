@@ -15,7 +15,12 @@ public class ZooApp {
         animals.add(new Seal("Sammy", 1));
     }
     private void runZoo() {
+        System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
+
         for (Animal animal : animals) {
+            System.out.println("----- " + "This is " + animal.getName() + " -----");
+            System.out.println(animal.getName() + " is a " + (animal.isBaby() ? "baby" : "adult") + ".");
+
             animal.makeSound();
             animal.eat();
 
@@ -25,8 +30,10 @@ public class ZooApp {
             if (animal instanceof Aquatic aquaticAnimal) {
                 aquaticAnimal.swim();
             }
-
+            System.out.println(); // extra rad för luft
         }
+
+        System.out.println("⭐·· The Zoo is now closed, thanks for visiting! ·· ⭐");
     }
 
 }

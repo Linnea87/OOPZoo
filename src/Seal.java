@@ -17,12 +17,12 @@ public class Seal extends Animal implements Aquatic{
     // Jag bestämmer vad en Seal äter.
     @Override
     public void eat() {
-        System.out.println(getName() + " eats fish!");
+        System.out.println(getName() + " eats fish.");
     }
 
     // Jag definierar hur en Seal simmar.
     @Override
     public void swim() {
-        System.out.println(getName() + " swims playfully in the water!");
+        System.out.println(getName() + " swims playfully in the water.");
     }
 }
