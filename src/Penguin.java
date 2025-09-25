@@ -1,3 +1,4 @@
+// Jag låter Pingvin ärva Animal och implementera Aquatic.
 public class Penguin extends Animal implements Aquatic{
     // När jag skapar en pingvin måste jag skicka in namn och ålder.
     public Penguin(String name, int age) {
@@ -11,7 +12,7 @@ public class Penguin extends Animal implements Aquatic{
 
     }
 
-    // Jag bestämmer vad en Pingvin äter.
+    // Jag bestämmer vad en Pingvin äter. Här anger jag "krill" som extra mat.
     @Override
     public void eat() {
         eatFish(getName(), "krill");
@@ -23,6 +24,8 @@ public class Penguin extends Animal implements Aquatic{
     public void swim() {
         System.out.println(getName() + " swims gracefully under water.");
     }
+
+    // Jag låter djuret berätta vilken art det är.
     @Override
     public String getSpecies() {
         return "Penguin";

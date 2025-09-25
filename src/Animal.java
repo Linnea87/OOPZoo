@@ -1,5 +1,4 @@
 // Jag gör Animal abstract för att den bara är en mall och inte ska kunna skapas direkt.
-
 public abstract class Animal {
 
     // Jag sparar djurets namn och ålder här.
@@ -12,15 +11,17 @@ public abstract class Animal {
         this.age = age;
     }
 
-    // Jag kan hämta namn och ålder. isBaby() kollar om djuret är yngre än 3 år.
+    // Jag kan hämta djurets namn.
     public String getName() {
         return name;
     }
 
+    // Jag kan hämta djurets ålder.
     public int getAge() {
         return age;
     }
 
+    // Jag kollar om djuret är yngre än 3 år och därmed en baby.
     public boolean isBaby() {
         return age < 3;
     }

@@ -1,4 +1,6 @@
-public class Lion extends  Animal implements Savanna{
+// Jag låter Lejon ärva Animal och implementera Savanna.
+public class Lion extends Animal implements Savanna{
+    // När jag skapar ett Lejon måste jag skicka in namn och ålder.
     public Lion(String name, int age) {
         super(name, age);
     }
@@ -12,18 +14,18 @@ public class Lion extends  Animal implements Savanna{
     // Jag bestämmer vad ett Lejon äter.
     @Override
     public void eat() {
-        System.out.println(getName()+ " eats meat.");
+        System.out.println(getName() + " eats meat.");
     }
 
-    // Jag definierar Elefantens beteende på savannen.
+    // Jag definierar Lejonets beteende på savannen.
     @Override
     public void roamSavanna() {
-        System.out.println(getName()+ " patrols the savanna.");
+        System.out.println(getName() + " patrols the savanna.");
     }
 
+    // Jag låter djuret berätta vilken art det är.
     @Override
-    public String getSpecies()
-    {
+    public String getSpecies() {
         return "Lion";
     }
 }
