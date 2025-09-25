@@ -1,17 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Jag gör ZooApp som startar och kör hela programmet.
+// ZooApp ansvarar för att hålla listan av djur och visa dem i olika miljöer.
+// Här finns logiken för att skriva ut alla djur, bara savann-djur eller bara vatten-djur.
 public class ZooApp {
     private List<Animal> animals;
     private AnimalPresenter presenter;
 
-    // När jag skapar ZooApp bygger jag listan av djur och startar zoo:t direkt.
+    // När jag skapar ZooApp fyller jag listan med djur och förbereder utskriften.
     public ZooApp() {
         animals = new ArrayList<>();
         presenter = new AnimalPresenter();
         initZoo(); // Jag fyller listan med djur.
-        runMenu();
+
+        System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
     }
 
     // Jag skapar alla djur som ska finnas i zoo:t.
@@ -25,34 +27,7 @@ public class ZooApp {
     }
 
     // Jag skriver ut rubriker och presenterar djuren i sina miljöer.
-    private void runMenu() {
-        java.util.Scanner sc = new java.util.Scanner(System.in);
-
-        while (true) {
-            System.out.println("\n⭐··Zoo Menu ·· ⭐ ");
-            System.out.println("Type a number and press ENTER:");
-            System.out.println("1) Show Savanna animals");
-            System.out.println("2) Show Aquatic animals");
-            System.out.println("3) Show ALL animals");
-            System.out.println("0) Exit");
-            System.out.println("Choose: ");
-
-            String choice = sc.nextLine().trim();
-            switch (choice) {
-                case "1" -> printSavanna();
-                case "2" -> printAquatic();
-                case "3" -> printAll();
-                case "0" -> {
-                    System.out.println("⭐·· Goodbye and thanks for visiting the Zoo! ·· ⭐");
-
-                    return; // lämnar menyn och programmet avslutas
-                }
-                default -> System.out.println("Invalid option. Please try again");
-            }
-        }
-
-    }
-    private void printSavanna() {
+    public void showSavannaAnimals() {
         // Jag visar alla savann-djur.
         System.out.println("\n=== Savanna Animals ===");
         System.out.println("(In the wild, these animals live on the wide African savanna.)\n");
@@ -62,7 +37,9 @@ public class ZooApp {
             }
         }
     }
-    private void printAquatic() {
+
+    public void showAquaticAnimals() {
+        // Jag visar alla vatten-djur.
         System.out.println("\n=== Aquatic Animals ===");
         System.out.println("(In the wild, these animals live in or near the water.)\n");
         for (Animal animal : animals) {
@@ -72,10 +49,12 @@ public class ZooApp {
         }
 
     }
-    private void printAll() {
-        System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
-        printSavanna();
-        printAquatic();
+    public void showAllAnimals() {
+        // Jag visar alla djur i zoo:t.
+        System.out.println("\n=== All Animals ===\n");
+        for (Animal animal : animals) {
+            presenter.present(animal);
+        }
 
     }
 

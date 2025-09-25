@@ -1,7 +1,9 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// Main startar hela programmet genom att skapa ZooApp (djur och logik)
+// och ZooMenu (menyn för användaren).
 public class Main {
     public static void main(String[] args) {
-        new ZooApp(); // jag startar hela appen härifrån
+        ZooApp zooApp = new ZooApp(); // jag startar appens kärna
+        ZooMenu menu = new ZooMenu(zooApp);  // jag kopplar menyn till appen
+        menu.run(); // jag kör menyn
     }
 }
