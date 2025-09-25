@@ -13,6 +13,7 @@ public class ZooApp {
     private void initZoo() {
         animals.add(new Elephant("Dumbo", 2));
         animals.add(new Seal("Sammy", 1));
+        animals.add(new Lion("Simba", 5));
     }
     private void runZoo() {
         System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
@@ -20,7 +21,13 @@ public class ZooApp {
         for (Animal animal : animals) {
             System.out.println("----- " + "This is " + animal.getName() + " -----");
             System.out.println("Species: " + animal.getSpecies());
-            System.out.println(animal.getName() + " is a " + (animal.isBaby() ? "baby" : "adult") + ".");
+
+            if (animal.isBaby()) {
+                System.out.println(animal.getName() + " is a baby.");
+            }
+            else {
+                System.out.println(animal.getName() + " is an adult.");
+            }
 
             animal.makeSound();
             animal.eat();
