@@ -17,7 +17,7 @@ public class Giraffe extends Animal implements Savanna{
         System.out.println(getName()+ " eats leaves from tall trees.");
     }
 
-    // Jag definierar Elefantens beteende på savannen.
+    // Jag definierar Giraffens beteende på savannen.
     @Override
     public void roamSavanna() {
         System.out.println(getName()+ " strolls gracefully across the savanna.");
