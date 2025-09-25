@@ -49,6 +49,7 @@ public class ZooApp {
         }
 
     }
+
     public void showAllAnimals() {
         // Jag visar alla djur i zoo:t.
         System.out.println("\n=== All Animals ===\n");
