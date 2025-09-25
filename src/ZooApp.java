@@ -18,7 +18,30 @@ public class ZooApp {
     private void runZoo() {
         System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
 
+        // Savanna-djur
+        System.out.println("\n=== Savanna Animals ===");
+        System.out.println("(In the wild, these animals live on the wide African savanna.)\n");
         for (Animal animal : animals) {
+            if (animal instanceof Savanna) {
+                presentAnimal(animal);
+            }
+        }
+
+        // Aquatic-djur
+        System.out.println("\n=== Aquatic Animals ===");
+        System.out.println("(In the wild, these animals live in or near the water.)\n");
+        for (Animal animal : animals) {
+            if (animal instanceof Aquatic) {
+                presentAnimal(animal);
+            }
+        }
+
+        System.out.println("⭐·· The Zoo is now closed, thanks for visiting! ·· ⭐");
+    }
+
+    // Hjälpmetod så jag slipper upprepa samma kod
+    private void presentAnimal(Animal animal) {
+
             System.out.println("----- " + "This is " + animal.getName() + " -----");
             System.out.println("Species: " + animal.getSpecies());
 
@@ -39,9 +62,6 @@ public class ZooApp {
                 aquaticAnimal.swim();
             }
             System.out.println(); // extra rad för luft
-        }
-
-        System.out.println("⭐·· The Zoo is now closed, thanks for visiting! ·· ⭐");
     }
 
 }
