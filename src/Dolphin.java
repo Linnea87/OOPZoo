@@ -34,6 +34,12 @@ public class Dolphin extends Animal implements Aquatic, Trainable {
     // Jag bestämmer vilket trick Delfinen kan göra.
     @Override
     public void performTrick() {
-        System.out.println(getName() + " playfully performs a backflip out of the water.");
+        System.out.println(getName() + " performs a backflip.");
+    }
+
+    // Jag anger vilken personlighet Delfinen har.
+    @Override
+    public String getPersonality() {
+        return "energetic and intelligent, always eager to perform.";
     }
 }

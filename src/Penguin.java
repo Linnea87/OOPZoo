@@ -34,6 +34,12 @@ public class Penguin extends Animal implements Aquatic, Trainable {
     // Jag bestämmer vilket trick Pingvinen kan göra.
     @Override
     public void performTrick() {
-        System.out.println(getName() + " proudly slides on his belly and snatches a fish.");
+        System.out.println(getName() + " slides on the ice and catches a fish.");
+    }
+
+    // Jag anger vilken personlighet Pingvinen har.
+    @Override
+    public String getPersonality() {
+        return "cheerful and social, loves sliding on the ice with friends.";
     }
 }

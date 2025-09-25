@@ -31,4 +31,10 @@ public class Seal extends Animal implements Aquatic{
     public String getSpecies() {
         return "Seal";
     }
+
+    // Jag anger vilken personlighet Sälen har.
+    @Override
+    public String getPersonality() {
+        return "playful and curious, loves splashing around.";
+    }
 }

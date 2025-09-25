@@ -33,7 +33,13 @@ public class Giraffe extends Animal implements Savanna, Trainable {
     //Jag bestämmer vilket trick Giraffen kan göra.
     @Override
     public void performTrick() {
-        System.out.println(getName() + " bows gracefully with a charming smile");
+        System.out.println(getName() + " bows gracefully to the audience.");
+    }
+
+    // Jag anger vilken personlighet Giraffen har.
+    @Override
+    public String getPersonality() {
+        return "calm and graceful, enjoys observing everything from above.";
     }
 
 }

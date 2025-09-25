@@ -32,4 +32,7 @@ public abstract class Animal {
 
     // Jag tvingar även varje djur att berätta vilken art det är.
     public abstract String getSpecies ();
+
+    // Jag tvingar alla djur att ha en personlighet.
+    public abstract String getPersonality ();
 }

@@ -32,4 +32,10 @@ public class Elephant extends Animal implements Savanna{
         return "Elephant";
     }
 
+    // Jag anger vilken personlighet Elefanten har.
+    @Override
+    public String getPersonality() {
+        return "gentle and wise, but a little clumsy.";
+    }
+
 }

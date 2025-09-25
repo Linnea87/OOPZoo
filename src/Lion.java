@@ -32,7 +32,13 @@ public class Lion extends Animal implements Savanna, Trainable {
     // Jag bestämmer vilket trick Lejonet kan göra.
     @Override
     public void performTrick() {
-        System.out.println(getName() + " roars boldly before jumping through a hoop.");
+        System.out.println(getName() + " jumps through a hoop.");
+    }
+
+    // Jag anger vilken personlighet Lejonet har.
+    @Override
+    public String getPersonality() {
+        return "brave and proud, always wants to be the center of attention.";
     }
 
 }

@@ -1,7 +1,7 @@
 // Jag ansvarar för att skriva ut ett djur på ett snyggt och enhetligt sätt.
 public class AnimalPresenter {
 
-    // Jag presenterar namn, art, ålder (baby/adult), ljud, mat och rörelse.
+    // Jag presenterar namn, art, ålder (baby/adult), personlighet, ljud, mat, rörelse och eventuella trick.
     public void present(Animal animal) {
 
         System.out.println("----- " + "This is " + animal.getName() + " -----");
@@ -14,9 +14,14 @@ public class AnimalPresenter {
             System.out.println(animal.getName() + " is an adult.");
         }
 
+        // Här skriver jag ut personligheten
+        System.out.println(animal.getName() + " is " + animal.getPersonality());
+
+        // Ljud och mat.
         animal.makeSound();
         animal.eat();
 
+        // Rörelse i rätt miljö.
         if (animal instanceof Savanna savannaAnimal) {
             savannaAnimal.roamSavanna();
         }
