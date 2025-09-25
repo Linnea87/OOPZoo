@@ -14,6 +14,7 @@ public class ZooApp {
         animals.add(new Elephant("Dumbo", 2));
         animals.add(new Seal("Sammy", 1));
         animals.add(new Lion("Simba", 5));
+        animals.add(new Giraffe("Sky", 3));
     }
     private void runZoo() {
         System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
