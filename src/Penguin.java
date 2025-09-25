@@ -14,7 +14,8 @@ public class Penguin extends Animal implements Aquatic{
     // Jag bestämmer vad en Pingvin äter.
     @Override
     public void eat() {
-        System.out.println(getName() + " eats fish.");
+        eatFish(getName(), "krill");
+
     }
 
     // Jag definierar hur en Pingvin simmar.

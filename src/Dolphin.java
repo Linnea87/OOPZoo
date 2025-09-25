@@ -14,7 +14,8 @@ public class Dolphin extends Animal implements Aquatic{
     // Jag bestämmer vad en Delfin äter.
     @Override
     public void eat() {
-        System.out.println(getName() + " eats fish.");
+        eatFish(getName(), "squid");
+
     }
 
     // Jag definierar hur en Seal simmar.

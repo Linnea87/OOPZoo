@@ -17,7 +17,7 @@ public class Seal extends Animal implements Aquatic{
     // Jag bestämmer vad en Seal äter.
     @Override
     public void eat() {
-        System.out.println(getName() + " eats fish.");
+       eatFish(getName(), "");
     }
 
     // Jag definierar hur en Seal simmar.
