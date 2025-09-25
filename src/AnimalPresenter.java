@@ -23,6 +23,12 @@ public class AnimalPresenter {
         if (animal instanceof Aquatic aquaticAnimal) {
             aquaticAnimal.swim();
         }
+
+        // Om djuret är vuxet och träningsbart visar jag dess trick.
+        if (animal instanceof Trainable t && !animal.isBaby() ) {
+            t.performTrick();
+        }
+
         System.out.println(); // Jag lägger in en extra rad för luft mellan djuren.
     }
 }

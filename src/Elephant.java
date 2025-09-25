@@ -32,5 +32,4 @@ public class Elephant extends Animal implements Savanna{
         return "Elephant";
     }
 
-
 }

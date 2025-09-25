@@ -1,5 +1,5 @@
 // Jag låter Delfin ärva Animal och implementera Aquatic.
-public class Dolphin extends Animal implements Aquatic{
+public class Dolphin extends Animal implements Aquatic, Trainable{
     // När jag skapar en Delfin måste jag skicka in namn och ålder.
     public Dolphin(String name, int age) {
         super(name, age);
@@ -29,5 +29,11 @@ public class Dolphin extends Animal implements Aquatic{
     @Override
     public String getSpecies() {
         return "Dolphin";
+    }
+
+    // Jag bestämmer vilket trick Delfinen kan göra.
+    @Override
+    public void performTrick() {
+        System.out.println(getName() + " playfully performs a backflip out of the water.");
     }
 }

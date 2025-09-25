@@ -1,5 +1,5 @@
 // Jag låter Giraff ärva Animal och implementera Savanna.
-public class Giraffe extends Animal implements Savanna{
+public class Giraffe extends Animal implements Savanna, Trainable{
 
     // När jag skapar en Giraff måste jag skicka in namn och ålder.
     public Giraffe(String name, int age) {
@@ -28,6 +28,12 @@ public class Giraffe extends Animal implements Savanna{
     @Override
     public String getSpecies() {
         return "Giraffe";
+    }
+
+    //Jag bestämmer vilket trick Giraffen kan göra.
+    @Override
+    public void performTrick() {
+        System.out.println(getName() + " bows gracefully with a charming smile");
     }
 
 }
