@@ -1,5 +1,5 @@
 // Jag låter Pingvin ärva Animal och implementera Aquatic.
-public class Penguin extends Animal implements Aquatic, Trainable{
+public class Penguin extends Animal implements Aquatic, Trainable {
     // När jag skapar en pingvin måste jag skicka in namn och ålder.
     public Penguin(String name, int age) {
         super(name, age);

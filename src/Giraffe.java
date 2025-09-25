@@ -1,5 +1,5 @@
 // Jag låter Giraff ärva Animal och implementera Savanna.
-public class Giraffe extends Animal implements Savanna, Trainable{
+public class Giraffe extends Animal implements Savanna, Trainable {
 
     // När jag skapar en Giraff måste jag skicka in namn och ålder.
     public Giraffe(String name, int age) {

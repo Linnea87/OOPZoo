@@ -1,5 +1,5 @@
 // Jag låter Delfin ärva Animal och implementera Aquatic.
-public class Dolphin extends Animal implements Aquatic, Trainable{
+public class Dolphin extends Animal implements Aquatic, Trainable {
     // När jag skapar en Delfin måste jag skicka in namn och ålder.
     public Dolphin(String name, int age) {
         super(name, age);

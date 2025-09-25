@@ -1,5 +1,5 @@
 // Jag låter Lejon ärva Animal och implementera Savanna.
-public class Lion extends Animal implements Savanna, Trainable{
+public class Lion extends Animal implements Savanna, Trainable {
     // När jag skapar ett Lejon måste jag skicka in namn och ålder.
     public Lion(String name, int age) {
         super(name, age);
