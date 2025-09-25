@@ -10,7 +10,7 @@ public class Seal extends Animal implements Aquatic{
     // Jag bestämmer hur en Seal låter.
     @Override
     public void makeSound() {
-        System.out.println(getName() + " Says: Arf arf!");
+        System.out.println(getName() + " grunts softly!");
 
     }
 
