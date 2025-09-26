@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 // ZooApp ansvarar för att hålla listan av djur och visa dem i olika miljöer.
-// Här finns logiken för att skriva ut alla djur, bara savann-djur eller bara vatten-djur.
+// Här finns logiken för att skriva ut alla djur, bara savann-djur, vatten-djur,
+// en enkel översikt (lista) eller starta en uppvisning med tricks.
 public class ZooApp {
     private List<Animal> animals;
     private AnimalPresenter presenter;
