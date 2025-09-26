@@ -23,6 +23,7 @@ public class ZooMenu {
                 case "1" -> zooApp.showSavannaAnimals();
                 case "2" -> zooApp.showAquaticAnimals();
                 case "3" -> zooApp.showAnimalList();
+                case "4" -> zooApp.showAnimalShow();
                 case "0" -> {
                     System.out.println("⭐·· Goodbye and thanks for visiting the Zoo! ·· ⭐");
                     return; // Jag lämnar menyn och programmet avslutas
@@ -41,6 +42,7 @@ public class ZooMenu {
         System.out.println("1) Show Savanna animals (detailed info)");
         System.out.println("2) Show Aquatic animals (detailed info)");
         System.out.println("3) Show Animal List (overview only)");
+        System.out.println("4) Start the Zoo Show");
         System.out.println("0) Exit");
         System.out.println("===============");
         System.out.println("Choose an option: ");

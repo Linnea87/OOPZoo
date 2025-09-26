@@ -71,4 +71,28 @@ public class ZooApp {
         }
         System.out.println();
     }
+
+    // Jag kör en kort show med alla vuxna djur som kan tricks.
+    public void showAnimalShow() {
+        System.out.println("\n=== Zoo Show ===\n");
+
+        int acts = 0; // Jag räknar antalet nummer i showen
+        for (Animal animal : animals) {
+            // Om djuret är träningsbart och vuxet får det uppträda
+            if (animal instanceof Trainable t && !animal.isBaby()) {
+                System.out.println("Now on stage: " + animal.getName() + " the " + animal.getSpecies() + "!");
+                t.performTrick(); // Djuret gör sitt trick
+                System.out.println("👏👏👏\n"); // lägger till lite applåder
+                acts++;
+            }
+        }
+        // Om inga djur deltog i showen visar jag ett meddelande
+        if (acts == 0) {
+            System.out.println("No acts today. (No adult trainable animals available.)\n");
+        }
+        else {
+            System.out.println("=== End of Show - thanks for watching! ===!");
+        }
+    }
+
 }
