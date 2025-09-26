@@ -1,7 +1,12 @@
-// Jag låter Säl ärva Animal och implementera Aquatic.
-public class Seal extends Animal implements Aquatic{
+package animals.aquatic;
 
-    // När jag skapar en Seal måste jag skicka in namn och ålder.
+import animals.Animal;
+import interfaces.Aquatic;
+
+// Jag låter Säl ärva animals.Animal och implementera interfaces.Aquatic.
+public class Seal extends Animal implements Aquatic {
+
+    // När jag skapar en animals.aquatic.Seal måste jag skicka in namn och ålder.
     public Seal(String name, int age) {
         super(name, age);
     }
@@ -29,7 +34,7 @@ public class Seal extends Animal implements Aquatic{
     // Jag låter djuret berätta vilken art det är.
     @Override
     public String getSpecies() {
-        return "Seal";
+        return "animals.aquatic.Seal";
     }
 
     // Jag anger vilken personlighet Sälen har.

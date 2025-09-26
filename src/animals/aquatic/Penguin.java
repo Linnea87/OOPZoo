@@ -1,4 +1,10 @@
-// Jag låter Pingvin ärva Animal och implementera Aquatic.
+package animals.aquatic;
+
+import animals.Animal;
+import interfaces.Aquatic;
+import interfaces.Trainable;
+
+// Jag låter Pingvin ärva animals.Animal och implementera interfaces.Aquatic.
 public class Penguin extends Animal implements Aquatic, Trainable {
     // När jag skapar en pingvin måste jag skicka in namn och ålder.
     public Penguin(String name, int age) {
@@ -28,7 +34,7 @@ public class Penguin extends Animal implements Aquatic, Trainable {
     // Jag låter djuret berätta vilken art det är.
     @Override
     public String getSpecies() {
-        return "Penguin";
+        return "animals.aquatic.Penguin";
     }
 
     // Jag bestämmer vilket trick Pingvinen kan göra.

@@ -1,12 +1,14 @@
+package app;
+
 import java.util.Scanner;
 
-// ZooMenu ansvarar för att visa menyn och låta användaren välja vad de vill se.
+// app.ZooMenu ansvarar för att visa menyn och låta användaren välja vad de vill se.
 // Här styr användaren om de vill titta på savann-djur, vatten-djur, alla djur eller avsluta.
 public class ZooMenu {
     private ZooApp zooApp;
     private Scanner scanner;
 
-    // När jag skapar ZooMenu måste jag koppla in ZooApp (så jag kan visa djuren)
+    // När jag skapar app.ZooMenu måste jag koppla in app.ZooApp (så jag kan visa djuren)
     // och starta en Scanner för att läsa användarens input.
     public ZooMenu(ZooApp zooApp) {
         this.zooApp = zooApp;
@@ -39,9 +41,9 @@ public class ZooMenu {
     private void printMenu() {
         System.out.println("\n=== Zoo Menu === ");
         System.out.println("Type a number and press ENTER:");
-        System.out.println("1) Show Savanna animals (detailed info)");
-        System.out.println("2) Show Aquatic animals (detailed info)");
-        System.out.println("3) Show Animal List (overview only)");
+        System.out.println("1) Show interfaces.Savanna animals (detailed info)");
+        System.out.println("2) Show interfaces.Aquatic animals (detailed info)");
+        System.out.println("3) Show animals.Animal List (overview only)");
         System.out.println("4) Start the Zoo Show");
         System.out.println("0) Exit");
         System.out.println("===============");

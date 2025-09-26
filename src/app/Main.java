@@ -1,5 +1,7 @@
-// Main startar hela programmet genom att skapa ZooApp (djur och logik)
-// och ZooMenu (menyn för användaren).
+package app;
+
+// app.Main startar hela programmet genom att skapa app.ZooApp (djur och logik)
+// och app.ZooMenu (menyn för användaren).
 public class Main {
     public static void main(String[] args) {
         ZooApp zooApp = new ZooApp(); // jag startar appens kärna

@@ -1,6 +1,9 @@
-// Jag låter Elefant ärva Animal och implementera Savanna.
+package animals.savanna;// Jag låter Elefant ärva animals.Animal och implementera interfaces.Savanna.
 
-public class Elephant extends Animal implements Savanna{
+import animals.Animal;
+import interfaces.Savanna;
+
+public class Elephant extends Animal implements Savanna {
 
     // När jag skapar en Elefant måste jag skicka in namn och ålder.
     public Elephant(String name, int age) {
@@ -29,7 +32,7 @@ public class Elephant extends Animal implements Savanna{
     // Jag låter djuret berätta vilken art det är.
     @Override
     public String getSpecies() {
-        return "Elephant";
+        return "animals.savanna.Elephant";
     }
 
     // Jag anger vilken personlighet Elefanten har.

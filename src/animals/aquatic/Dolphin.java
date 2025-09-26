@@ -1,4 +1,10 @@
-// Jag låter Delfin ärva Animal och implementera Aquatic.
+package animals.aquatic;
+
+import animals.Animal;
+import interfaces.Aquatic;
+import interfaces.Trainable;
+
+// Jag låter Delfin ärva animals.Animal och implementera interfaces.Aquatic.
 public class Dolphin extends Animal implements Aquatic, Trainable {
     // När jag skapar en Delfin måste jag skicka in namn och ålder.
     public Dolphin(String name, int age) {
@@ -28,7 +34,7 @@ public class Dolphin extends Animal implements Aquatic, Trainable {
     // Jag låter djuret berätta vilken art det är.
     @Override
     public String getSpecies() {
-        return "Dolphin";
+        return "animals.aquatic.Dolphin";
     }
 
     // Jag bestämmer vilket trick Delfinen kan göra.

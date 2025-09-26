@@ -1,4 +1,10 @@
-// Jag låter Giraff ärva Animal och implementera Savanna.
+package animals.savanna;
+
+import animals.Animal;
+import interfaces.Savanna;
+import interfaces.Trainable;
+
+// Jag låter Giraff ärva animals.Animal och implementera interfaces.Savanna.
 public class Giraffe extends Animal implements Savanna, Trainable {
 
     // När jag skapar en Giraff måste jag skicka in namn och ålder.
@@ -27,7 +33,7 @@ public class Giraffe extends Animal implements Savanna, Trainable {
     // Jag låter djuret berätta vilken art det är.
     @Override
     public String getSpecies() {
-        return "Giraffe";
+        return "animals.savanna.Giraffe";
     }
 
     //Jag bestämmer vilket trick Giraffen kan göra.

@@ -1,14 +1,28 @@
+package app;
+
 import java.util.ArrayList;
 import java.util.List;
 
-// ZooApp ansvarar för att hålla listan av djur och visa dem i olika miljöer.
+import animals.Animal;
+import animals.savanna.Elephant;
+import animals.savanna.Lion;
+import animals.savanna.Giraffe;
+import animals.aquatic.Seal;
+import animals.aquatic.Dolphin;
+import animals.aquatic.Penguin;
+import interfaces.Savanna;
+import interfaces.Aquatic;
+import interfaces.Trainable;
+import util.AnimalPresenter;
+
+// app.ZooApp ansvarar för att hålla listan av djur och visa dem i olika miljöer.
 // Här finns logiken för att skriva ut alla djur, bara savann-djur, vatten-djur,
 // en enkel översikt (lista) eller starta en uppvisning med tricks.
 public class ZooApp {
     private List<Animal> animals;
     private AnimalPresenter presenter;
 
-    // När jag skapar ZooApp fyller jag listan med djur och förbereder utskriften.
+    // När jag skapar app.ZooApp fyller jag listan med djur och förbereder utskriften.
     public ZooApp() {
         animals = new ArrayList<>();
         presenter = new AnimalPresenter();
@@ -30,7 +44,7 @@ public class ZooApp {
     // Jag skriver ut rubriker och presenterar djuren i sina miljöer.
     public void showSavannaAnimals() {
         // Jag visar alla savann-djur med detaljerad information.
-        System.out.println("\n=== Savanna Animals ===");
+        System.out.println("\n=== interfaces.Savanna Animals ===");
         System.out.println("(In the wild, these animals live on the wide African savanna.)\n");
         for (Animal animal : animals) {
             if (animal instanceof Savanna) {
@@ -41,7 +55,7 @@ public class ZooApp {
 
     public void showAquaticAnimals() {
         // Jag visar alla vatten-djur med detaljerad information.
-        System.out.println("\n=== Aquatic Animals ===");
+        System.out.println("\n=== interfaces.Aquatic Animals ===");
         System.out.println("(In the wild, these animals live in or near the water.)\n");
         for (Animal animal : animals) {
             if (animal instanceof Aquatic) {
@@ -55,8 +69,8 @@ public class ZooApp {
         // Jag visar alla djur i zoo:t.
         System.out.println("\n=== Zoo Overview ===");
 
-        // Savanna-djur först
-        System.out.println("\n--- Savanna Animals ---");
+        // interfaces.Savanna-djur först
+        System.out.println("\n--- interfaces.Savanna Animals ---");
         for (Animal animal : animals) {
             if (animal instanceof Savanna) {
                 System.out.println(animal.getName() + " (" + animal.getSpecies() + ")");
@@ -64,7 +78,7 @@ public class ZooApp {
         }
         System.out.println();
 
-        System.out.println("--- Aquatic Animals ---");
+        System.out.println("--- interfaces.Aquatic Animals ---");
         for (Animal animal : animals) {
             if (animal instanceof Aquatic) {
                 System.out.println(animal.getName() + " (" + animal.getSpecies() + ")");

@@ -1,4 +1,6 @@
-// Jag gör Animal abstract för att den bara är en mall och inte ska kunna skapas direkt.
+package animals;
+
+// Jag gör animals.Animal abstract för att den bara är en mall och inte ska kunna skapas direkt.
 public abstract class Animal {
 
     // Jag sparar djurets namn och ålder här.
@@ -26,7 +28,7 @@ public abstract class Animal {
         return age < 3;
     }
 
-    // Jag tvingar alla subklasser (som Elephant, Seal osv) att själva skriva dessa metoder.
+    // Jag tvingar alla subklasser (som animals.savanna.Elephant, animals.aquatic.Seal osv) att själva skriva dessa metoder.
     public abstract void makeSound();
     public abstract void eat();
 

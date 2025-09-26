@@ -1,3 +1,11 @@
+package util;
+
+import animals.Animal;
+import interfaces.Aquatic;
+import interfaces.Savanna;
+import interfaces.Trainable;
+
+
 // Jag ansvarar för att skriva ut ett djur på ett snyggt och enhetligt sätt.
 public class AnimalPresenter {
 
