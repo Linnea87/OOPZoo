@@ -55,7 +55,7 @@ public class ZooApp {
         System.out.println("\n=== Zoo Overview ===");
 
         // Savanna-djur först
-        System.out.println("--- Savanna Animals ---");
+        System.out.println("\n--- Savanna Animals ---");
         for (Animal animal : animals) {
             if (animal instanceof Savanna) {
                 System.out.println(animal.getName() + " (" + animal.getSpecies() + ")");
