@@ -13,7 +13,7 @@ public class ZooApp {
         presenter = new AnimalPresenter();
         initZoo(); // Jag fyller listan med djur.
 
-        System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐\n");
+        System.out.println("\n⭐·· Welcome to the Zoo! ·· ⭐");
     }
 
     // Jag skapar alla djur som ska finnas i zoo:t.
@@ -28,7 +28,7 @@ public class ZooApp {
 
     // Jag skriver ut rubriker och presenterar djuren i sina miljöer.
     public void showSavannaAnimals() {
-        // Jag visar alla savann-djur.
+        // Jag visar alla savann-djur med detaljerad information.
         System.out.println("\n=== Savanna Animals ===");
         System.out.println("(In the wild, these animals live on the wide African savanna.)\n");
         for (Animal animal : animals) {
@@ -39,7 +39,7 @@ public class ZooApp {
     }
 
     public void showAquaticAnimals() {
-        // Jag visar alla vatten-djur.
+        // Jag visar alla vatten-djur med detaljerad information.
         System.out.println("\n=== Aquatic Animals ===");
         System.out.println("(In the wild, these animals live in or near the water.)\n");
         for (Animal animal : animals) {
@@ -47,16 +47,28 @@ public class ZooApp {
                 presenter.present(animal);
             }
         }
-
     }
-
-    public void showAllAnimals() {
+    // Jag visar en översikt över alla djur i zoo:t (namn + art).
+    // Detta är bara en lista – vill man se detaljer får man välja miljö i menyn.
+    public void showAnimalList() {
         // Jag visar alla djur i zoo:t.
-        System.out.println("\n=== All Animals ===\n");
+        System.out.println("\n=== Zoo Overview ===");
+
+        // Savanna-djur först
+        System.out.println("--- Savanna Animals ---");
         for (Animal animal : animals) {
-            presenter.present(animal);
+            if (animal instanceof Savanna) {
+                System.out.println(animal.getName() + " (" + animal.getSpecies() + ")");
+            }
         }
+        System.out.println();
 
+        System.out.println("--- Aquatic Animals ---");
+        for (Animal animal : animals) {
+            if (animal instanceof Aquatic) {
+                System.out.println(animal.getName() + " (" + animal.getSpecies() + ")");
+            }
+        }
+        System.out.println();
     }
-
 }
